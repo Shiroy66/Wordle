@@ -1,17 +1,23 @@
-import React from 'react'; // Usa esta forma (ES modules)
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
-import WordleGame from './pages/WordleGamePage';
+import { useState } from "react";
+import "./App.css";
+import WordleGame from "./pages/WordleGamePage";
 
 function App() {
-  const [count, setCount] = React.useState(0);
-
   return (
-    <div className="Conatiner">
-      <h1>WORDLE BY SERGIO</h1>
-      <WordleGame/>
-    </div>
+    <>
+      <div className="bg-[url('/background.jpg')] bg-cover bg-center h-screen w-full overflow-x-hidden">
+        <div className="pb-8">
+          <h1 className="text-7xl [text-shadow:_0_0_2px_#FF00FF] font-['Pixelify_Sans'] text-center py-4 hover:[text-shadow:_0_0_7px_#F400A1] bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 bg-clip-text text-transparent hover:scale-105 transition-all duration-300 drop-shadow-lg group relative">
+            Wordle By Sergio
+            <div
+              className="h-1 w-0 bg-pink-400 absolute -bottom-2 left-1/2 
+              group-hover:w-full group-hover:left-0 transition-all duration-300"
+            ></div>
+          </h1>
+        </div>
+        <WordleGame />
+      </div>
+    </>
   );
 }
 

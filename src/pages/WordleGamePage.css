@@ -1,3 +1,6 @@
+@import "tailwindcss";
+
+
 .wordle-game-container {
     display: flex;
     flex-direction: column;
