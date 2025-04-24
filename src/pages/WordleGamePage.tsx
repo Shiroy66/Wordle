@@ -24,11 +24,10 @@ const WordleGamePage: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center justify-center p-4">
-      {/* ¡Clave única para reiniciar el componente! */}
       <WordleGame 
-        key={targetWord} // 🔑 Esto fuerza un reinicio completo
+        key={targetWord}
         targetWord={targetWord}
-        validWords={wordsData.words}
+        validWords={wordsData.words.map(word => word.toUpperCase())}
         onNewWordRequested={getNewWord}
         onGameEnd={(won) => {
           console.log(won ? `¡Ganaste! La palabra era ${targetWord} 🎉` 
